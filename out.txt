@@ -1,0 +1,2289 @@
+Ok(
+    [
+        NetworkInterface {
+            name: "psc0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 74,
+        },
+        NetworkInterface {
+            name: "gimlet21",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 56,
+        },
+        NetworkInterface {
+            name: "gimlet4",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 68,
+        },
+        NetworkInterface {
+            name: "tfportrear18_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3015,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 91,
+        },
+        NetworkInterface {
+            name: "gimlet16",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 50,
+        },
+        NetworkInterface {
+            name: "gimlet23",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 58,
+        },
+        NetworkInterface {
+            name: "gimlet29",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 64,
+        },
+        NetworkInterface {
+            name: "gimlet18",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 52,
+        },
+        NetworkInterface {
+            name: "gimlet25",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 60,
+        },
+        NetworkInterface {
+            name: "gimlet31",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 67,
+        },
+        NetworkInterface {
+            name: "gimlet30",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 66,
+        },
+        NetworkInterface {
+            name: "tfportrear0_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3003,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 82,
+        },
+        NetworkInterface {
+            name: "gimlet15",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 49,
+        },
+        NetworkInterface {
+            name: "psc1",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 75,
+        },
+        NetworkInterface {
+            name: "sidecar1",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 77,
+        },
+        NetworkInterface {
+            name: "gimlet14",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 48,
+        },
+        NetworkInterface {
+            name: "gimlet12",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 46,
+        },
+        NetworkInterface {
+            name: "tfportrear16_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3013,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 89,
+        },
+        NetworkInterface {
+            name: "tfportrear13_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3010,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 86,
+        },
+        NetworkInterface {
+            name: "gimlet19",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 53,
+        },
+        NetworkInterface {
+            name: "tfportrear15_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3012,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 88,
+        },
+        NetworkInterface {
+            name: "tfportrear31_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3022,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 106,
+        },
+        NetworkInterface {
+            name: "tfportrear29_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3020,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 103,
+        },
+        NetworkInterface {
+            name: "tofino0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 80,
+        },
+        NetworkInterface {
+            name: "tfportrear17_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3014,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 90,
+        },
+        NetworkInterface {
+            name: "tfportrear14_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3011,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 87,
+        },
+        NetworkInterface {
+            name: "tfportrear3_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3006,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 107,
+        },
+        NetworkInterface {
+            name: "gimlet6",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 70,
+        },
+        NetworkInterface {
+            name: "gimlet20",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 55,
+        },
+        NetworkInterface {
+            name: "tfportrear22_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3019,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 96,
+        },
+        NetworkInterface {
+            name: "tfportrear28_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:301f,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 102,
+        },
+        NetworkInterface {
+            name: "gimlet11",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 45,
+        },
+        NetworkInterface {
+            name: "tfportrear27_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:301e,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 101,
+        },
+        NetworkInterface {
+            name: "techport0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 78,
+        },
+        NetworkInterface {
+            name: "tfportrear6_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3009,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 110,
+        },
+        NetworkInterface {
+            name: "tfportrear24_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:301b,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 98,
+        },
+        NetworkInterface {
+            name: "tfportrear21_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3018,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 95,
+        },
+        NetworkInterface {
+            name: "tfportrear25_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:301c,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 99,
+        },
+        NetworkInterface {
+            name: "gimlet3",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 65,
+        },
+        NetworkInterface {
+            name: "lo0",
+            addr: Some(
+                V4(
+                    V4IfAddr {
+                        ip: 127.0.0.1,
+                        broadcast: None,
+                        netmask: Some(
+                            255.0.0.0,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 1,
+        },
+        NetworkInterface {
+            name: "lo0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: ::1,
+                        broadcast: None,
+                        netmask: Some(
+                            ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 1,
+        },
+        NetworkInterface {
+            name: "tfportrear10_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:300d,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 83,
+        },
+        NetworkInterface {
+            name: "gimlet10",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 44,
+        },
+        NetworkInterface {
+            name: "gimlet7",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 71,
+        },
+        NetworkInterface {
+            name: "tfportrear11_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:300e,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 84,
+        },
+        NetworkInterface {
+            name: "tfportrear5_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3008,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 109,
+        },
+        NetworkInterface {
+            name: "tfportrear19_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3016,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 92,
+        },
+        NetworkInterface {
+            name: "gimlet24",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 59,
+        },
+        NetworkInterface {
+            name: "gimlet26",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 61,
+        },
+        NetworkInterface {
+            name: "techport1",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 79,
+        },
+        NetworkInterface {
+            name: "tfportrear30_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3021,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 105,
+        },
+        NetworkInterface {
+            name: "tfportrear4_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3007,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 108,
+        },
+        NetworkInterface {
+            name: "tfportrear8_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:300b,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 112,
+        },
+        NetworkInterface {
+            name: "tfportrear1_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3004,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 93,
+        },
+        NetworkInterface {
+            name: "tfportint0_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 81,
+        },
+        NetworkInterface {
+            name: "tfportrear7_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:300a,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 111,
+        },
+        NetworkInterface {
+            name: "gimlet22",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 57,
+        },
+        NetworkInterface {
+            name: "gimlet9",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 73,
+        },
+        NetworkInterface {
+            name: "sidecar0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 76,
+        },
+        NetworkInterface {
+            name: "gimlet28",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 63,
+        },
+        NetworkInterface {
+            name: "tfportrear9_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:300c,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 113,
+        },
+        NetworkInterface {
+            name: "gimlet1",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 43,
+        },
+        NetworkInterface {
+            name: "gimlet0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 42,
+        },
+        NetworkInterface {
+            name: "gimlet13",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 47,
+        },
+        NetworkInterface {
+            name: "tfportrear12_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:300f,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 85,
+        },
+        NetworkInterface {
+            name: "tfportrear20_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3017,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 94,
+        },
+        NetworkInterface {
+            name: "tfportrear26_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:301d,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 100,
+        },
+        NetworkInterface {
+            name: "gimlet2",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 54,
+        },
+        NetworkInterface {
+            name: "gimlet17",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 51,
+        },
+        NetworkInterface {
+            name: "tfportrear23_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:301a,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 97,
+        },
+        NetworkInterface {
+            name: "tfportrear2_0",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3005,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 104,
+        },
+        NetworkInterface {
+            name: "gimlet8",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 72,
+        },
+        NetworkInterface {
+            name: "gimlet5",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 69,
+        },
+        NetworkInterface {
+            name: "gimlet27",
+            addr: Some(
+                V6(
+                    V6IfAddr {
+                        ip: fe80::aa40:25ff:fe05:3002,
+                        broadcast: None,
+                        netmask: Some(
+                            ffc0::,
+                        ),
+                    },
+                ),
+            ),
+            mac_addr: None,
+            index: 62,
+        },
+    ],
+)
+NetworkInterface {
+    name: "lo0",
+    description: "",
+    index: 1,
+    mac: None,
+    ips: [
+        V4(
+            Ipv4Network {
+                addr: 0.0.0.0,
+                prefix: 0,
+            },
+        ),
+        V6(
+            Ipv6Network {
+                addr: ::1,
+                prefix: 128,
+            },
+        ),
+    ],
+    flags: 137489287241,
+}
+NetworkInterface {
+    name: "gimlet0",
+    description: "",
+    index: 42,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet1",
+    description: "",
+    index: 43,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet2",
+    description: "",
+    index: 54,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet3",
+    description: "",
+    index: 65,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet4",
+    description: "",
+    index: 68,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet5",
+    description: "",
+    index: 69,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet6",
+    description: "",
+    index: 70,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet7",
+    description: "",
+    index: 71,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet8",
+    description: "",
+    index: 72,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet9",
+    description: "",
+    index: 73,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet10",
+    description: "",
+    index: 44,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet11",
+    description: "",
+    index: 45,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet12",
+    description: "",
+    index: 46,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet13",
+    description: "",
+    index: 47,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet14",
+    description: "",
+    index: 48,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet15",
+    description: "",
+    index: 49,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet16",
+    description: "",
+    index: 50,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet17",
+    description: "",
+    index: 51,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet18",
+    description: "",
+    index: 52,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet19",
+    description: "",
+    index: 53,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet20",
+    description: "",
+    index: 55,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet21",
+    description: "",
+    index: 56,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet22",
+    description: "",
+    index: 57,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet23",
+    description: "",
+    index: 58,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet24",
+    description: "",
+    index: 59,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet25",
+    description: "",
+    index: 60,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet26",
+    description: "",
+    index: 61,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet27",
+    description: "",
+    index: 62,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet28",
+    description: "",
+    index: 63,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet29",
+    description: "",
+    index: 64,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet30",
+    description: "",
+    index: 66,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "gimlet31",
+    description: "",
+    index: 67,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "psc0",
+    description: "",
+    index: 74,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "psc1",
+    description: "",
+    index: 75,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "sidecar0",
+    description: "",
+    index: 76,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "sidecar1",
+    description: "",
+    index: 77,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "techport0",
+    description: "",
+    index: 78,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "techport1",
+    description: "",
+    index: 79,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "tofino0",
+    description: "",
+    index: 80,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2207646763073,
+}
+NetworkInterface {
+    name: "tfportint0_0",
+    description: "",
+    index: 81,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3002,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear0_0",
+    description: "",
+    index: 82,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3003,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear10_0",
+    description: "",
+    index: 83,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:300d,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear11_0",
+    description: "",
+    index: 84,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:300e,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear12_0",
+    description: "",
+    index: 85,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:300f,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear13_0",
+    description: "",
+    index: 86,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3010,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear14_0",
+    description: "",
+    index: 87,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3011,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear15_0",
+    description: "",
+    index: 88,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3012,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear16_0",
+    description: "",
+    index: 89,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3013,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear17_0",
+    description: "",
+    index: 90,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3014,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear18_0",
+    description: "",
+    index: 91,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3015,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear19_0",
+    description: "",
+    index: 92,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3016,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear1_0",
+    description: "",
+    index: 93,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3004,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear20_0",
+    description: "",
+    index: 94,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3017,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear21_0",
+    description: "",
+    index: 95,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3018,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear22_0",
+    description: "",
+    index: 96,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3019,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear23_0",
+    description: "",
+    index: 97,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:301a,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear24_0",
+    description: "",
+    index: 98,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:301b,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear25_0",
+    description: "",
+    index: 99,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:301c,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear26_0",
+    description: "",
+    index: 100,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:301d,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear27_0",
+    description: "",
+    index: 101,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:301e,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear28_0",
+    description: "",
+    index: 102,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:301f,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear29_0",
+    description: "",
+    index: 103,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3020,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear2_0",
+    description: "",
+    index: 104,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3005,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear30_0",
+    description: "",
+    index: 105,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3021,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear31_0",
+    description: "",
+    index: 106,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3022,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear3_0",
+    description: "",
+    index: 107,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3006,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear4_0",
+    description: "",
+    index: 108,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3007,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear5_0",
+    description: "",
+    index: 109,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3008,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear6_0",
+    description: "",
+    index: 110,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:3009,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear7_0",
+    description: "",
+    index: 111,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:300a,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear8_0",
+    description: "",
+    index: 112,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:300b,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
+NetworkInterface {
+    name: "tfportrear9_0",
+    description: "",
+    index: 113,
+    mac: None,
+    ips: [
+        V6(
+            Ipv6Network {
+                addr: fe80::aa40:25ff:fe05:300c,
+                prefix: 10,
+            },
+        ),
+    ],
+    flags: 2199056828481,
+}
