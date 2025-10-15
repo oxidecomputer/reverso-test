@@ -12,5 +12,3 @@ Error: No loopback detected
 
 In this system, the `gimlet27` cubby has a Reverso board installed, while
 `gimlet2` does not.
-
-The selected interface must have a link-local IPv6 unicast address.

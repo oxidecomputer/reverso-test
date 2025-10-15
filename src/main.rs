@@ -27,7 +27,7 @@ fn main() -> Result<()> {
             bail!("Interface '{interface_name}' not found");
         }
     };
-    let ipv6 = iface
+    let src_addr = iface
         .ips
         .iter()
         .find_map(|ip| match ip.ip() {
@@ -42,37 +42,20 @@ fn main() -> Result<()> {
         })
         .ok_or_else(|| anyhow!("could not get IP address"))?;
 
-    // Link-local addresses in EUI-64 format have the MAC address embedded
-    // in segments 4-6 (bytes 8-15): fe80:0000:0000:0000:XXYY:ZZFF:FEWW:VVUU
-    // where XX-YY-FF-FE-WW is inserted by the EUI-64 process
-    // Original MAC: XX-YY-ZZ-WW-VV-UU
-    let segments = ipv6.segments();
-
-    // Extract bytes 8-15 (segments 4-7)
-    let byte1 = ((segments[4] >> 8) as u8) ^ 0x02; // Flip the U/L bit
-    let byte2 = (segments[4] & 0xFF) as u8;
-    let byte3 = (segments[5] >> 8) as u8;
-    // segments[5] & 0xFF should be 0xFF
-    // segments[6] >> 8 should be 0xFE
-    let byte4 = (segments[6] & 0xFF) as u8;
-    let byte5 = (segments[7] >> 8) as u8;
-    let byte6 = (segments[7] & 0xFF) as u8;
-
-    let mac = dlpi::Address {
-        addr: [byte1, byte2, byte3, byte4, byte5, byte6],
-    };
-
     // Send to a multicast address
     let dst_addr = Ipv6Addr::new(0xff02, 0, 0, 0, 0, 0, 0x01de, 2);
+    let dst_mac = dlpi::Address {
+        addr: [0x33, 0x33, 0x1, 0xde, 0x0, 0x2], // multicast
+    };
     if verbose {
-        println!("Testing interface: {}", iface.name);
-        println!("MAC address: {mac}");
-        println!("Source address:      {ipv6}");
+        println!("Testing interface:   {}", iface.name);
+        println!("Source address:      {src_addr}");
+        println!("Destination MAC:     {dst_mac}");
         println!("Destination address: {dst_addr}");
     }
 
     let frame = construct_icmpv6_frame(
-        ipv6,
+        src_addr,
         dst_addr,
         &rand::random(), // payload
         rand::random(),  // identifier
@@ -129,12 +112,7 @@ fn main() -> Result<()> {
     // Open the DLPI interface
     let mut iface_send = dlpi::Dlpi::open(interface_name)?;
     iface_send.bind_ethertype(u32::from(EtherTypes::Ipv6.0))?;
-    iface_send.send(
-        dlpi::Address {
-            addr: [0x33, 0x33, 0x1, 0xde, 0x0, 0x2], // multicast
-        },
-        &frame,
-    )?;
+    iface_send.send(dst_mac, &frame)?;
     let out = rx_handle.join().unwrap()?;
     if out {
         println!("Success: loopback detected");
