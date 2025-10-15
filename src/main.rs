@@ -14,7 +14,7 @@ fn main() -> Result<()> {
         eprintln!("Usage: {} [-v|--verbose] <interface_name>", args[0]);
         std::process::exit(1);
     }
-    let verbose = args
+    let verbose = args[1..args.len() - 1]
         .iter()
         .any(|a| matches!(a.as_str(), "-v" | "--verbose"));
     let interface_name = args.last().unwrap();
@@ -62,7 +62,8 @@ fn main() -> Result<()> {
         addr: [byte1, byte2, byte3, byte4, byte5, byte6],
     };
 
-    let dst_addr = Ipv6Addr::new(0xff02, 0, 0, 0, 0, 0, 0x01de, 2); // multicast
+    // Send to a multicast address
+    let dst_addr = Ipv6Addr::new(0xff02, 0, 0, 0, 0, 0, 0x01de, 2);
     if verbose {
         println!("Testing interface: {}", iface.name);
         println!("MAC address: {mac}");
@@ -92,7 +93,7 @@ fn main() -> Result<()> {
             if let Some(packet) = iface_recv.recv(Some(100))? {
                 if verbose {
                     println!(
-                        "Got packet from {} to {}:\n    {:02x?}",
+                        "Got packet from {} to {}:",
                         packet
                             .src()
                             .map(|p| p.to_string())
@@ -101,8 +102,16 @@ fn main() -> Result<()> {
                             .dst()
                             .map(|p| p.to_string())
                             .unwrap_or_else(|| "[?]".to_owned()),
-                        packet.data(),
                     );
+                    for chunk in packet.data().chunks(16) {
+                        for (i, b) in chunk.iter().enumerate() {
+                            print!(
+                                "{}{b:02x}",
+                                if i == 0 { "    " } else { " " }
+                            );
+                        }
+                        println!();
+                    }
                 }
                 if packet.data() == frame_ {
                     return Ok(true);
