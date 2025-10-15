@@ -4,18 +4,21 @@ use pnet::packet::ethernet::EtherTypes;
 use pnet::packet::icmpv6::MutableIcmpv6Packet;
 use pnet::packet::icmpv6::{Icmpv6Packet, Icmpv6Types, echo_request};
 use pnet::packet::ipv6::MutableIpv6Packet;
+use rand::Rng;
 use std::env;
 use std::net::Ipv6Addr;
 use std::thread;
 
 fn main() -> Result<()> {
     let args: Vec<String> = env::args().collect();
-    if args.len() != 2 {
-        eprintln!("Usage: {} <interface_name>", args[0]);
+    if args.len() < 2 {
+        eprintln!("Usage: {} [-v|--verbose] <interface_name>", args[0]);
         std::process::exit(1);
     }
-
-    let interface_name = &args[1];
+    let verbose = args
+        .iter()
+        .any(|a| matches!(a.as_str(), "-v" | "--verbose"));
+    let interface_name = args.last().unwrap();
 
     // Find the network interface
     let interfaces = pnet::datalink::interfaces();
@@ -61,13 +64,17 @@ fn main() -> Result<()> {
         addr: [byte1, byte2, byte3, byte4, byte5, byte6],
     };
 
-    println!("Testing interface: {}", iface.name);
-    println!("MAC address: {:02x?}", mac.addr);
+    if verbose {
+        println!("Testing interface: {}", iface.name);
+        println!("MAC address: {}", mac);
+    }
 
+    let mut rng = rand::rng();
+    let payload: [u8; 56] = rng.random();
     let frame = construct_icmpv6_frame(
         ipv6,
         Ipv6Addr::new(0xff02, 0, 0, 0, 0, 0, 0x01de, 2), // multicast
-        &[1; 56],
+        &payload,
         123, // identifier
         456, // sequence
     )?;
@@ -83,27 +90,36 @@ fn main() -> Result<()> {
         let end_time = std::time::Instant::now() + std::time::Duration::from_millis(100);
         while std::time::Instant::now() < end_time {
             if let Some(packet) = iface_recv.recv(Some(100))? {
-                println!(
-                    "got packet from {:02x?} to {:02x?} with data {:x?}",
-                    packet.src().map(|p| p.addr),
-                    packet.dst().map(|p| p.addr),
-                    packet.data(),
-                );
+                if verbose {
+                    println!(
+                        "Got packet from {} to {}:\n    {:02x?}",
+                        packet
+                            .src()
+                            .map(|p| p.to_string())
+                            .unwrap_or_else(|| "[?]".to_owned()),
+                        packet
+                            .dst()
+                            .map(|p| p.to_string())
+                            .unwrap_or_else(|| "[?]".to_owned()),
+                        packet.data(),
+                    );
+                }
                 if packet.data() == frame_ {
                     return Ok(true);
                 }
             }
         }
-        println!("timeout");
+        if verbose {
+            println!("Timeout while waiting for matching packet");
+        }
         Ok(false)
     });
 
     rx.recv().unwrap();
 
-    // Find the network interface
+    // Open the DLPI interface
     let mut iface_send = dlpi::Dlpi::open(interface_name)?;
     iface_send.bind_ethertype(u32::from(EtherTypes::Ipv6.0))?;
-
     iface_send.send(
         dlpi::Address {
             addr: [0x33, 0x33, 0x1, 0xde, 0x0, 0x2], // multicast
@@ -112,9 +128,9 @@ fn main() -> Result<()> {
     )?;
     let out = rx_handle.join().unwrap()?;
     if out {
-        println!("found loopback, great job");
+        println!("Success: loopback detected");
     } else {
-        bail!("no loopback detected");
+        bail!("No loopback detected");
     }
 
     Ok(())
@@ -179,6 +195,5 @@ pub fn construct_icmpv6_frame(
         ipv6_packet.set_destination(dest_ipv6);
     }
 
-    // XXX ahhhh
     Ok(buffer)
 }

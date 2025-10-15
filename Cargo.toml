@@ -7,3 +7,4 @@ edition = "2024"
 bootserver = { git = "https://github.com/oxidecomputer/boot-image-tools", branch = "promiscuous-dlpi-rx" }
 pnet = "0.35.0"
 anyhow = "1.0.100"
+rand = "0.9.2"
