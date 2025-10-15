@@ -4,7 +4,6 @@ use pnet::packet::ethernet::EtherTypes;
 use pnet::packet::icmpv6::MutableIcmpv6Packet;
 use pnet::packet::icmpv6::{Icmpv6Packet, Icmpv6Types, echo_request};
 use pnet::packet::ipv6::MutableIpv6Packet;
-use rand::Rng;
 use std::env;
 use std::net::Ipv6Addr;
 use std::thread;
@@ -25,8 +24,7 @@ fn main() -> Result<()> {
     let iface = match interfaces.iter().find(|i| i.name == *interface_name) {
         Some(i) => i,
         None => {
-            eprintln!("Interface '{}' not found", interface_name);
-            std::process::exit(1);
+            bail!("Interface '{interface_name}' not found");
         }
     };
     let ipv6 = iface
@@ -64,19 +62,20 @@ fn main() -> Result<()> {
         addr: [byte1, byte2, byte3, byte4, byte5, byte6],
     };
 
+    let dst_addr = Ipv6Addr::new(0xff02, 0, 0, 0, 0, 0, 0x01de, 2); // multicast
     if verbose {
         println!("Testing interface: {}", iface.name);
-        println!("MAC address: {}", mac);
+        println!("MAC address: {mac}");
+        println!("Source address:      {ipv6}");
+        println!("Destination address: {dst_addr}");
     }
 
-    let mut rng = rand::rng();
-    let payload: [u8; 56] = rng.random();
     let frame = construct_icmpv6_frame(
         ipv6,
-        Ipv6Addr::new(0xff02, 0, 0, 0, 0, 0, 0x01de, 2), // multicast
-        &payload,
-        123, // identifier
-        456, // sequence
+        dst_addr,
+        &rand::random(), // payload
+        rand::random(),  // identifier
+        rand::random(),  // sequence
     )?;
 
     let (tx, rx) = std::sync::mpsc::channel();
@@ -86,8 +85,9 @@ fn main() -> Result<()> {
         let mut iface_recv = dlpi::Dlpi::open(&interface_name_)?;
         iface_recv.bind_ethertype(u32::from(EtherTypes::Ipv6.0))?;
         iface_recv.promisc_on()?;
+        let end_time =
+            std::time::Instant::now() + std::time::Duration::from_millis(100);
         tx.send(()).unwrap(); // unblock the main thread
-        let end_time = std::time::Instant::now() + std::time::Duration::from_millis(100);
         while std::time::Instant::now() < end_time {
             if let Some(packet) = iface_recv.recv(Some(100))? {
                 if verbose {
@@ -153,47 +153,43 @@ pub fn construct_icmpv6_frame(
     // Create buffer for the entire frame
     let mut buffer = vec![0; total_size];
 
-    // ===== Construct ICMPv6 Echo Request =====
-    let icmpv6_offset = IPV6_HEADER_SIZE;
-    {
-        let mut icmpv6_packet = MutableIcmpv6Packet::new(&mut buffer[icmpv6_offset..]).unwrap();
-        icmpv6_packet.set_icmpv6_type(Icmpv6Types::EchoRequest);
-        icmpv6_packet.set_icmpv6_code(pnet::packet::icmpv6::Icmpv6Code(0));
-    }
-
     // Create echo request at correct offset
-    {
-        let mut echo_req =
-            echo_request::MutableEchoRequestPacket::new(&mut buffer[icmpv6_offset..]).unwrap();
-        echo_req.set_identifier(identifier);
-        echo_req.set_sequence_number(sequence);
-        echo_req.set_payload(data);
-    }
+    let mut echo_req = echo_request::MutableEchoRequestPacket::new(
+        &mut buffer[IPV6_HEADER_SIZE..],
+    )
+    .unwrap();
+    echo_req.set_icmpv6_type(Icmpv6Types::EchoRequest);
+    echo_req.set_icmpv6_code(pnet::packet::icmpv6::Icmpv6Code(0));
+    echo_req.set_identifier(identifier);
+    echo_req.set_sequence_number(sequence);
+    echo_req.set_payload(data);
 
-    // Calculate and set ICMPv6 checksum
-    let checksum = {
-        let icmpv6_immutable = Icmpv6Packet::new(&buffer[icmpv6_offset..]).unwrap();
-        pnet::packet::icmpv6::checksum(&icmpv6_immutable, &src_ipv6, &dest_ipv6)
-    };
+    // Calculate ICMPv6 checksum
+    let icmpv6_immutable =
+        Icmpv6Packet::new(&buffer[IPV6_HEADER_SIZE..]).unwrap();
+    let checksum = pnet::packet::icmpv6::checksum(
+        &icmpv6_immutable,
+        &src_ipv6,
+        &dest_ipv6,
+    );
 
-    {
-        let mut icmpv6_packet = MutableIcmpv6Packet::new(&mut buffer[icmpv6_offset..]).unwrap();
-        icmpv6_packet.set_checksum(checksum);
-    }
+    // Reborrow to set the checksum
+    let mut icmpv6_packet =
+        MutableIcmpv6Packet::new(&mut buffer[IPV6_HEADER_SIZE..]).unwrap();
+    icmpv6_packet.set_checksum(checksum);
 
-    // ===== Construct IPv6 Header =====
-    {
-        let ipv6_offset = 0;
-        let mut ipv6_packet = MutableIpv6Packet::new(&mut buffer[ipv6_offset..]).unwrap();
-        ipv6_packet.set_version(6);
-        ipv6_packet.set_traffic_class(0);
-        ipv6_packet.set_flow_label(0);
-        ipv6_packet.set_payload_length(icmpv6_payload_size as u16);
-        ipv6_packet.set_next_header(pnet::packet::ip::IpNextHeaderProtocols::Icmpv6);
-        ipv6_packet.set_hop_limit(64);
-        ipv6_packet.set_source(src_ipv6);
-        ipv6_packet.set_destination(dest_ipv6);
-    }
+    // Build the IPv6 header at the front of the buffer
+    let mut ipv6_packet = MutableIpv6Packet::new(&mut buffer).unwrap();
+    ipv6_packet.set_version(6);
+    ipv6_packet.set_traffic_class(0);
+    ipv6_packet.set_flow_label(0);
+    ipv6_packet.set_payload_length(icmpv6_payload_size as u16);
+    ipv6_packet
+        .set_next_header(pnet::packet::ip::IpNextHeaderProtocols::Icmpv6);
+    ipv6_packet.set_hop_limit(64);
+    ipv6_packet.set_source(src_ipv6);
+    ipv6_packet.set_destination(dest_ipv6);
+    // Payload is already populated in the buffer
 
     Ok(buffer)
 }
