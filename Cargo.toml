@@ -4,7 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-hex = "0.4.3"
-bootserver = { git = "https://github.com/oxidecomputer/boot-image-tools" }
-rand = "0.9.2"
+bootserver = { git = "https://github.com/oxidecomputer/boot-image-tools", branch = "promiscuous-dlpi-rx" }
+pnet = "0.35.0"
 anyhow = "1.0.100"
